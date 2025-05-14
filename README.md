@@ -13,31 +13,6 @@ InvalidConfiguration: The table pages has multiple blocks with slug cta, but the
 
 Relevant bits to look at in code
 
-```js
-// src\collections\Pages\index.ts
-{
-  fields: [
-    {
-      name: 'layout',
-      type: 'blocks',
-      localized: true,
-      blocks: [
-        CallToAction,
-        Content, // This is where the issue occurs because Content also contains the CallToAction block
-        MediaBlock,
-        Archive,
-        FormBlock,
-      ],
-      required: true,
-    },
-  ],
-  label: 'Content',
-}
+[Page Collection](blob/main/src/collections/Pages/index.ts#L77)
 
-// src\blocks\Content\config.ts
-{
-  type: 'blocks',
-  name: 'layout',
-  blocks: [CallToAction]
-}
-```
+[Content Block Config](blob/main/src/blocks/Content/config.ts#L12)
