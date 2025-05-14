@@ -13,6 +13,6 @@ InvalidConfiguration: The table pages has multiple blocks with slug cta, but the
 
 Relevant bits to look at in code
 
-[Page Collection](blob/main/src/collections/Pages/index.ts#L77)
+[Page Collection](src/collections/Pages/index.ts#L77)
 
-[Content Block Config](blob/main/src/blocks/Content/config.ts#L12)
+[Content Block Config](src/blocks/Content/config.ts#L12)
